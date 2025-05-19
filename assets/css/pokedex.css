@@ -146,15 +146,179 @@
     border-radius: 1rem;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    width: 300px;
+    height: 560px;
+    border-radius: 2rem;
+    background-color: #fff;
+    border: 1px solid gray;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-card {
+    margin: 0;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.container-pokemon {
+    height: 250px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.head-card {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-card .name {
+    font-size: 1.5rem;
+}
+
+.head-card .number {
+    font-size: 1rem;
+}
+
+.pokemon-img {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-card .pokemons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.modal-card .pokemons li {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem;
+    font-size: .650rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.modal-card img {
+    width: 150px;
+    height: 150px;
+}
+
+.skills-pokemon {
+    background-color: #fff;
+    margin-top: -25px;
+    padding-top: 2.5rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.modal-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #cecece;
+    cursor: pointer;
+    font-size: .8rem;
+}
+
+.tab-btn.active {
+    color: #000;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.info-item {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    font-size: .8rem;
+}
+
+.info-item .value {
+    position: absolute;
+    left: 7rem;
+}
+
+.label {
+    color: #696969;
+    margin-left: 20px;
+}
+
+.value {
+    margin-left: 20px;
+}
+
+.experienceBar {
+    position: absolute;
+    left: 10.5rem;
+    width: 40%;
+    height: 2px;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .modal {
+        width: 360px;
+        height: 582px;
+    }
+
+    .info-item .value {
+        left: 8rem;
+    }
+
+    .experienceBar {
+        left: 12rem;
     }
 }
 
 @media screen and (min-width: 576px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
+    }    
+    
+    .info-item {
+        font-size: 1.1rem;
     }
 }
 
